@@ -10,7 +10,7 @@
 
 <body>
     <main>
-    <h1>Hello Placeholder</h1>
+    <h1 id="greeting-display">Hello Placeholder</h1>
     <label for="languages">Choose a language:</label>
 
 <select name="language" id="lang_select">
@@ -120,8 +120,8 @@
 
     <script>
     (async function() {
-        const { text } = await( await fetch(`/api/message`)).json();
-        document.querySelector('#name').textContent = text;
+        const { text } = await( await fetch(`/api/retdata`)).json();
+        document.querySelector('#greeting-display').textContent = text;
     }());
     </script>
 </body>
