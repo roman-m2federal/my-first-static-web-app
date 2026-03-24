@@ -1,1 +1,2 @@
 //Todo
+//Server=tcp:sandboxserver3.database.windows.net,1433;Initial Catalog=SandboxDB2;Persist Security Info=False;User ID=CloudSA218e7c6e;Password={SegAdink2!T};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
