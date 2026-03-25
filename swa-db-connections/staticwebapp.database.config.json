@@ -30,7 +30,7 @@
   },
   "entities": {
     "Person": {
-      "source": "dbo.hellos",
+      "source": "dbo.MyTestPersonTable",
       "permissions": [
         {
           "actions": ["*"],
