@@ -29,8 +29,8 @@
     }
   },
   "entities": {
-    "Person": {
-      "source": "dbo.MyTestPersonTable",
+    "Greeting": {
+      "source": "dbo.hellos",
       "permissions": [
         {
           "actions": ["*"],
