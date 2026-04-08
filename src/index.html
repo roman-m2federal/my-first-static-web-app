@@ -129,9 +129,7 @@
     const data = await response.json();
     const ilang = document.getElementById("lang_select").value;
     const langindex = data.value.findIndex(item => item.language === ilang);
-    console.table(data.value);
     console.log(ilang);
-    console.log(data);
     console.log(langindex);
     document.getElementById("greeting-display").textContent=data.value[langindex].greeting;
 }
