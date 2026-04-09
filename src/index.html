@@ -124,7 +124,7 @@
     </main>
     <script>
     async function list() {
-    const endpoint = '/rest/Greeting';
+    const endpoint = '/data-api/rest/Greeting';
     const response = await fetch(endpoint);
     const data = await response.json();
     const ilang = document.getElementById("lang_select").value;
