@@ -20,7 +20,7 @@
     "host": {
       "mode": "production",
       "cors": {
-        "origins": ["http://localhost:4280"],
+        "origins": ["http://localhost:4280", "https://zealous-stone-041090a1e.2.azurestaticapps.net/"],
         "allow-credentials": false
         }
       },
