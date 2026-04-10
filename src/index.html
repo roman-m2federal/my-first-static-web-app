@@ -126,8 +126,8 @@
     async function list() {
     const endpoint = '/data-api/rest/Greeting';
     const response = await fetch(endpoint);
-    const data = await response.text();
-    console.log("RAW RESPONSE", raw);
+    const data = await response.json();
+    console.log("RAW RESPONSE", data);
     const ilang = document.getElementById("lang_select").value;
     const langindex = data.value.findIndex(item => item.language === ilang);
     console.log(ilang);
