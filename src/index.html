@@ -125,13 +125,30 @@
     <script>
     async function list() {
     const endpoint = '/data-api/rest/Greeting';
-    const response = await fetch(endpoint);
-    const data = await response.json();
-    const ilang = document.getElementById("lang_select").value;
-    const langindex = data.value.findIndex(item => item.language === ilang);
-    console.log(ilang);
-    console.log(langindex);
-    document.getElementById("greeting-display").textContent=data.value[langindex].greeting;
+    try {
+        const response = await fetch(endpoint);
+        console.log('Response status:', response.status);
+        const text = await response.text();
+        console.log('Response text:', text);
+
+        if (!text) {
+            console.error('Empty response from API');
+            document.getElementById("greeting-display").textContent = 'Error: No data from API';
+            return;
+        }
+
+        const data = JSON.parse(text);
+        console.log('Parsed data:', data);
+
+        const ilang = document.getElementById("lang_select").value;
+        const langindex = data.value.findIndex(item => item.language === ilang);
+        console.log(ilang);
+        console.log(langindex);
+        document.getElementById("greeting-display").textContent=data.value[langindex].greeting;
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById("greeting-display").textContent = 'Error: ' + error.message;
+    }
 }
     </script>
 </body>

@@ -33,7 +33,7 @@
       "source": "hello",
       "permissions": [
         {
-          "actions": ["*"],
+          "actions": ["read"],
           "role": "anonymous"
         }
       ]
